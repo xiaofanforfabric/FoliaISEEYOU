@@ -27,7 +27,7 @@ val pluginYaml = paperPluginYaml {
     main = "cn.xor7.xiaohei.icu.ISeeYouPlugin"
     authors.add("xiaofan")
     description = "Record players in .mcpr format. Folia-only build: requires Folia with Photographer API (e.g. Foliaphotographer). Does not support original Leaves."
-    website = "https://github.com/MC-XiaoHei/ISeeYou"
+    website = "https://github.com/xiaofanforfabric/FoliaISEEYOU"
     foliaSupported = true
     apiVersion = "1.21"
     dependencies {

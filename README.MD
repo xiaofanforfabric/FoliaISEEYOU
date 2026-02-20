@@ -1,19 +1,19 @@
-# ISeeYou
+# ISeeYou (Folia)
 
-_Also known as ICU_
+_Also known as ICU — Folia-only build_
 
 [![License](https://img.shields.io/github/license/MC-XiaoHei/ISeeYou)](LICENSE)
 
-ISeeYou is a simple and lightweight plugin to record player in `.mcpr` format. [What's `.mcpr`?](https://github.com/ReplayMod/ReplayMod)
+ISeeYou is a simple and lightweight plugin to record players in `.mcpr` format. [What's `.mcpr`?](https://github.com/ReplayMod/ReplayMod)
 
 > [!WARNING]
-> This plugin only works on servers that support the `photographer`.
-> 
-> Currently, only [Leaves](https://github.com/LeavesMC/Leaves), [Leaf](https://github.com/Winds-Studio/Leaf) and [Lophine](https://github.com/LuminolMC/Lophine) provide that.
+> **This is a Folia-only build.** It does **not** support original Leaves, Leaf, Lophine, or vanilla Paper.
 >
-> The developers only guarantee that the **latest stable version** of the ISeeYou plugin will work properly on the **latest version** of the Leaves core server.
-> 
-> Compatibility with older versions is not guaranteed.
+> This plugin only works on **Folia with Photographer API**. Use a server built from:
+>
+> **[Foliaphotographer](https://github.com/xiaofanforfabric/Foliaphotographer/tree/ver/1.21.4-PhotographerAPI)** — Folia fork that adds the Photographer API for `.mcpr` recording.
+>
+> Compatibility with other cores is not supported.
 
 ## Features
 
@@ -50,17 +50,15 @@ ISeeYou is a simple and lightweight plugin to record player in `.mcpr` format. [
 
 ## Download
 
-- **Stable Versions**
-    - [GitHub Releases](https://github.com/MC-XiaoHei/ISeeYou/releases)
-- **Development Versions**
-    - [GitHub Actions CI](https://github.com/MC-XiaoHei/ISeeYou/actions/workflows/dev-build.yml?query=is%3Asuccess)
+- **This repository (Folia build)**  
+  - [FoliaISEEYOU](https://github.com/xiaofanforfabric/FoliaISEEYOU) — source and releases for this Folia-only build.
 
 ## Building From Source
 
 ### 1. Clone the project repository
 
 ```shell
-git clone https://github.com/MC-XiaoHei/ISeeYou.git
+git clone https://github.com/xiaofanforfabric/FoliaISEEYOU.git
 ```
 
 ### 2. Compile and Build
@@ -69,7 +67,7 @@ git clone https://github.com/MC-XiaoHei/ISeeYou.git
 ./gradlew shadowJar
 ```
 
-After the build is complete, you will find the `ISeeYou-2.2.0.jar` file in the `build/libs` directory.
+After the build is complete, you will find the JAR (e.g. `ISeeYou-master-2.2.0-xiaofanforfolia.jar`) in the `build/libs` directory.
 
 ## License
 

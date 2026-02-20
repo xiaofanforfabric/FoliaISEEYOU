@@ -1,30 +1,24 @@
-# ISEEYOU 平台支持说明
+# ISeeYou (Folia) — Platform support
 
-## Photographer 与服务器核心
+## Photographer and server core
 
-Photographer 是录制 .mcpr 回放的核心，依赖服务器 NMS（PlayerList.placeNewPhotographer 等）。  
-**必须由服务器核心提供**，无法以纯插件形式在未改动的 Paper 上实现。
+Recording `.mcpr` replays requires a **Photographer API** provided by the server (e.g. `PlayerList.placeNewPhotographer`). It cannot be implemented as a plain plugin on unmodified Paper.
 
-## 当前支持
+## This build: Folia only
 
-### Leaves 服务器（完整功能）✅
-- 录制功能可用
-- 使用 Leaves 内置的 Photographer API
-- **开发时**：`./gradlew runServer` 已配置为使用 Leaves，可直接测试录制
+This is a **Folia-only** build. It does **not** support:
 
-### Paper / Spigot 服务器（部分功能）
-- 插件可正常加载
-- 录制相关功能禁用，并提示使用 Leaves
+- Original [Leaves](https://github.com/LeavesMC/Leaves)
+- Leaf, Lophine, or other photographer-capable cores
 
-## 使用 Leaves 获得完整功能
+## Supported server
 
-1. 下载 [Leaves](https://github.com/LeavesMC/Leaves) 服务器
-2. 将 `ISeeYou-*.jar` 放入 `plugins` 目录
-3. 启动服务器
+Use **Folia with Photographer API**:
 
-## 开发
+- **[Foliaphotographer](https://github.com/xiaofanforfabric/Foliaphotographer/tree/ver/1.21.4-PhotographerAPI)** — Folia fork that adds the Photographer API for `.mcpr` recording.
 
-```bash
-./gradlew runServer
-```
-会下载并启动 Leaves 服务器，photographer 功能可用。
+Build the server from that branch (e.g. `createMojmapPaperclipJar`), then put this plugin in `plugins/`.
+
+## Development
+
+Configure your run to use a Folia server that includes the Photographer API (e.g. a local Foliaphotographer build). This repo’s `runServer` may be set to a Folia/Paper download; ensure the server JAR is one that exposes `getPhotographerManager()`.
